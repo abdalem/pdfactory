@@ -1,0 +1,12 @@
+version: '3'
+services:
+  pdfactory:
+    image: abdalem/pdfactory
+    environment:
+      NODE_ENV: "production"
+      VIRTUAL_PORT: "3000"
+      VIRTUAL_HOST: "ppt.abbi-studio.fr"
+networks:
+  default:
+    external:
+      name: nginx-reverse-proxy
